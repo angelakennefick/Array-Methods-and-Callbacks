@@ -20,7 +20,7 @@ Your goal today will be to manipulate the data using array methods and callbacks
 
 ### Sample Data
 
-```js
+
   {
       "Year": 1930,
       "Datetime": "13 Jul 1930 - 15:00",
