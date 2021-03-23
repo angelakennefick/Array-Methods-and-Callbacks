@@ -68,8 +68,13 @@ hint - you should be looking at the stage key inside of the objects
 */
 
 function getFinals(data) {
-   /* code here */
+   const finalsTeams = 
+   data.filter(function(e){
+    return e["Stage"] === "Final";  
+});
+return finalsTeams;
 }
+console.log("Task 2 YahYeet");
 
 
 
