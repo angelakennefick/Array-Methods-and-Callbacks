@@ -100,10 +100,43 @@ Use the higher-order function getWinners to do the following:
 3. Determines the winner (home or away) of each `finals` game. 
 4. Returns the names of all winning countries in an array called `winners` */ 
 
-function getWinners(array1, getFinalsCB) {
-    /* code here */
+function getWinners(data, getFinalsCB) {
+    return getFinalsCB(data).map(function(e){
+        if(e["Home Team Goals"] > e["Away Team Goals"]){
+            return e["Home Team Name"];
+        }else{
+            return e["Away Team Name"];
+        }
+    });
 }
+//     let htGoals = 
+//     getFinalsCB(data).map(function(e){
+//         return e["Home Team Goals"];  
+//   });
+//   let atGoals = 
+//   getFinalsCB(data).map(function(e){
+//       return e["Away Team Goals"];  
+// });
+// let awayTeam =
+// getFinalsCB(data).map(function(e){
+//     return e["Away Team Name"];  
+// });
+// let homeTeam =
+// getFinalsCB(data).map(function(e){
+//     return e["Home Team Name"];
+// });  
+// let winner;
+// if (htGoals > atGoals){
+//     winner = homeTeam;
+// }else {
+//     winner = awayTeam;
+// }
+// return winner;
+// }
 
+
+
+console.log("Task 4", getWinners(fifaData, getFinals));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
